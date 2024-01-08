@@ -1,0 +1,27 @@
+  <html>
+  <head>
+  <title></title>
+  <style>
+  table th,td{
+  border:1px solid black;
+  }
+  </style>
+  </head>
+  <body>
+  <table>
+   <tr>
+    <th>Name</th>
+    <th>Aadhar number  </th>
+    <th>  Identification</th>
+    </tr>
+    <% voters.forEach(function(voters){ %>
+    <tr>
+    <td> <%= voters.name %></td>
+    <td><%= voters.AadharNumber %></td>
+    <td><%= voters.Identification %></td>
+    </tr>
+    <% }); %>
+    </table>
+
+    </body>
+    </html>

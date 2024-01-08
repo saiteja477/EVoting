@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Log In</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+   <% function Submit(){ %>
+  <% var pswd=document.getElementById('pswd').value; %>
+   <% var pswd1=document.getElementById('pswd1').value; %>
+    <% if(pswd=""){ %>
+     <%= alert("Enter same password"); %>
+     <% return false; %>
+    <% } %>
+  <% } %>
+  </script>
+  <style type="text/css">
+  	.container-fluid{
+  		border-spacing: 0px;
+  		padding-right: 120px;
+  		text-align: right;
+  	}
+  	#btn{
+  		border-right: 20px;
+  		color: blue;
+  	}
+  	.name{
+  		font-style: italic;
+  		font-size: 20px;
+  		color: skyblue;
+  	}
+  	.container{
+  		text-align: right;
+  		background-image: url("https://www.coindesk.com/wp-content/uploads/2014/05/ID-shutterstock_176416751.jpg");
+  		background-repeat: no-repeat;
+  	}
+  	#name{
+  		font-style: italic;
+  		font-size: 30px;
+  		color: green;
+  	}
+  	h1{
+  		font-style: italic;
+  		font-size: 50px;
+  		font-variant-caps: small-caps;
+  		color: #0C24E5  ;
+  		text-decoration-line: underline;
+  	}
+  	#submitbtn{
+  		color: blue;
+  		border-right: 20px;
+  		background-color: pink;
+  	}
+  	.navbar{
+  		min-height: 10px;
+  	}
+  	#home{
+
+  	}
+
+  </style>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+	<form action="" method="">
+	<div class="container-fluid">
+		<label class="name">Enter Id:</label>
+		<input type="text" name="name">
+		<label class="name">Password:</label>
+		<input type="password" name="pswd" >
+		<input type="submit"  value="submit" id="btn">
+	</form>
+		</div>
+ <a href="/" class="btn btn-info btn-lg id="home">
+          <span class="glyphicon glyphicon-home"></span> Home
+        </a>
+</nav><br><br><br><br><br>
+	<div class="container">
+    <form action="" method="POST" onsubmit="return Submit()">
+		<h1>Register Here</h1><br><br>
+		<label id="name">Enter Name</label>
+		<input type="text" name="rname" required><br><br>
+		<label id="name">Aadhar Card Number</label>
+		<input type="text" name="anumber" required><br><br>
+		<label id="name">Identification Marks</label>
+		<input type="text" name="idmarks" required><br><br>
+		<label id="name">Set Password</label>
+		<input type="password" id="pswd" name="spwd"><br><br>
+		<label id="name">Confirm Password</label>
+		<input type="password" id="pswd1" name="spwd1"><br><br>
+		<label id="name" name="gender">Gender: </label>
+		<label id="name">Male <input type="radio" name="gender"></label>
+		<label id="name">Female <input type="radio" name="gender"></label><br><br>
+		<input class="btn btn-large" id="submitbtn" type="submit" value="submit"><br>
+	</form>
+  <form action="voters">
+    <button id="submitbtn2" class="btn btn-large">Number of people Registerd</button>
+  </form>
+  </div>
+</body>
+</html>
